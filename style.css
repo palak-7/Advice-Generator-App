@@ -1,0 +1,85 @@
+:root {
+  --Blue-200: hsl(193, 38%, 86%);
+  --Green-300: hsl(150, 100%, 66%);
+  --Blue-600: hsl(217, 19%, 38%);
+  --Blue-900: hsl(217, 19%, 24%);
+  --Blue-950: hsl(218, 23%, 16%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+body {
+  background-color: var(--Blue-950);
+  font-family: Manrope, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: min(90%, 28rem);
+  background-color: var(--Blue-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.5rem 4rem;
+  border-radius: 0.5rem;
+  gap: 1.5rem;
+  position: relative;
+}
+.heading {
+  color: var(--Green-300);
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#advice-content {
+  color: var(--Blue-200);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.dice-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--Green-300);
+  transition:
+    box-shadow 0.3s,
+    transform 0.2s;
+}
+.dice-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+@media (hover: hover) {
+  .dice-btn:hover {
+    box-shadow: 0 0 25px var(--Green-300);
+  }
+}
